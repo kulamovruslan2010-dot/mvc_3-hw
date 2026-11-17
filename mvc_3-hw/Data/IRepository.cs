@@ -6,5 +6,6 @@ namespace mvc_3_hw.Data
     public interface IRepository
     {
         List<Product> GetAll();
+        Product? GetById(int id);
     }
 }

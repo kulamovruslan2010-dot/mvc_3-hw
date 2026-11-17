@@ -17,5 +17,19 @@ namespace mvc_3_hw.Controllers
             var products = _repository.GetAll();
             return View(products);
         }
+
+        public IActionResult Details(int id)
+        {
+            var product = _repository.GetById(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
+        }
+
+        public IActionResult About() => View();
+
+        public IActionResult Contacts() => View();
     }
 }

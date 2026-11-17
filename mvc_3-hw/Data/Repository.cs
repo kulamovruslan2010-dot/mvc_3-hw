@@ -8,6 +8,7 @@ namespace mvc_3_hw.Data
     {
         private readonly List<Product> _products;
 
+        public Product? GetById(int id) => _products.FirstOrDefault(p => p.Id == id);
         public Repository()
         {
             _products = new List<Product>
